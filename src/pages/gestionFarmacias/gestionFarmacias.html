@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Gestion de farmacias
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<span>
+<h2> Lista de farmacias </h2>
+</span>
+
+<ion-list paading>
+        <ion-item *ngFor="let farmacia of farmacias" (click)="onClick(farmacia.nombre)">
+          <ion-avatar item-start>
+            <img src="">
+          </ion-avatar>
+          <h2>{{farmacia.nombre}}</h2>
+      </ion-item>
+<span>
+ <h2>Agregar nueva farmacia</h2>
+</span>
+   <ion-item>
+      <ion-label fixed>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]=nombre></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label fixed>Calle</ion-label>
+    <ion-input type="text" [(ngModel)]=calle></ion-input>
+    </ion-item>
+ 
+ <ion-item>
+    <ion-label fixed>Numero</ion-label>
+    <ion-input type="text" [(ngModel)]=numero></ion-input>
+
+ </ion-item>
+
+</ion-list>
+  
+  
+</ion-content>
+
